@@ -1,3 +1,7 @@
+[hidden] { display: none !important; }
+#load-status { color: #b9c4d2; font-size: 1rem; }
+#refresh { background: #12273b; color: #eef4ff; border: 1px solid #35516c; border-radius: 5px; padding: 10px 16px; cursor: pointer; margin-bottom: 18px; }
+:focus-visible { outline: 2px solid #6ce5e8; outline-offset: 4px; }
 :root {
   color-scheme: dark;
   --ink: #eef4ff;
