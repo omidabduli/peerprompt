@@ -134,6 +134,15 @@ select { color: #aeb9c8; background: #091524; border: 1px solid var(--line); bor
 .protocol li > span { font-family: "DM Mono", monospace; color: var(--cyan); font-size: .72rem; }
 .protocol strong { font-size: 1.05rem; }.protocol li p { color: var(--muted); margin: 5px 0 0; font-size: .88rem; max-width: 580px; }
 footer { padding: 24px 3.2vw; border-top: 1px solid var(--line); color: var(--dim); font-family: "DM Mono", monospace; font-size: .66rem; display: flex; justify-content: space-between; }
+.access { border-top: 1px solid var(--line); padding: 82px 5.5vw; background: #06101c; }
+.access > div:first-child { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-bottom: 42px; }
+.access h2 { margin: 0; font-size: clamp(2rem, 3.4vw, 3.4rem); line-height: 1.05; letter-spacing: -.055em; }
+.access-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); }
+.access-grid article { padding: 28px; min-height: 210px; border-right: 1px solid var(--line); }
+.access-grid article:last-child { border-right: 0; }
+.access-grid article > span { color: var(--cyan); font-family: "DM Mono", monospace; font-size: .7rem; }
+.access-grid h3 { margin: 40px 0 8px; font-size: 1rem; }
+.access-grid p { color: var(--muted); font-size: .83rem; margin: 0; }
 
 @media (max-width: 1000px) {
   .workspace { grid-template-columns: 180px 1fr; }
@@ -160,6 +169,11 @@ footer { padding: 24px 3.2vw; border-top: 1px solid var(--line); color: var(--di
   .signal-panel { grid-template-columns: 1fr; padding: 34px 24px; }
   .signal-panel > .section-label { margin: 0; }
   .protocol { grid-template-columns: 1fr; padding: 62px 22px; gap: 50px; }
+  .access { padding: 62px 22px; }
+  .access > div:first-child { display: block; }
+  .access-grid { grid-template-columns: 1fr; }
+  .access-grid article { border-right: 0; border-bottom: 1px solid var(--line); min-height: 170px; }
+  .access-grid article:last-child { border-bottom: 0; }
   footer { padding-inline: 20px; flex-direction: column; gap: 6px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .orbit.two { animation: none; } * { transition: none !important; } }
