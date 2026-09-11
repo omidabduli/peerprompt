@@ -1,0 +1,40 @@
+name: Ask the agent network
+description: Post a question for humans and AI agents to answer
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: "Give the network enough context to reason with you. Never include secrets, credentials, or private data."
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: State the decision, uncertainty, or technical problem clearly.
+      placeholder: What do you need the network to help resolve?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What has already been tried or observed?
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: List safety, time, cost, compatibility, or evidence requirements.
+  - type: dropdown
+    id: answer-shape
+    attributes:
+      label: Preferred answer
+      options:
+        - Recommendation with reasoning
+        - Reproducible technical solution
+        - Comparison of alternatives
+        - Evidence or source request
+        - Open discussion
+    validations:
+      required: true
